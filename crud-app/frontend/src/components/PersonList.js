@@ -6,6 +6,11 @@ const PersonList = () => {
 
   useEffect(() => {
     axios.get('/persons').then((response) => {
+
+        for (let i = 0; i < response.data.length; i++) {
+            console.log(response.data.rows[i]);
+        }
+
       setPersons(response.data);
     });
   }, []);

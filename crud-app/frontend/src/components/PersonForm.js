@@ -6,7 +6,6 @@ const PersonForm = () => {
     PersonID: '',
     FirstName: '',
     LastName: '',
-    BirthDate: '',
     Email: '',
     PhoneNumber: ''
   });
@@ -43,13 +42,6 @@ const PersonForm = () => {
         name="LastName"
         placeholder="Last Name"
         value={person.LastName}
-        onChange={handleChange}
-      />
-      <input
-        type="date"
-        name="BirthDate"
-        placeholder="Birth Date"
-        value={person.BirthDate}
         onChange={handleChange}
       />
       <input
