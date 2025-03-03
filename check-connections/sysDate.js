@@ -10,9 +10,9 @@ async function checkConnection() {
         connectString: "localhost:1521/xe"
     });
 
-    result = await connection.execute(`SELECT * FROM SYSTEM.PERSON`);
+    result = await connection.execute(`SELECT SYSDATE FROM DUAL`);
 
-    console.log(result.rows);
+    console.log(result.rows[0]);
 
 
     console.log('connected to database');
