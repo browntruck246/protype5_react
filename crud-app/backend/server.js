@@ -1,10 +1,15 @@
+const cors = require('cors');
 const express = require('express');
 const bodyParser = require('body-parser');
 const { initialize, close } = require('./db/connection');
 const { getAllPersons, createPerson } = require('./db/queries');
 
 const app = express();
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
+
+app.use(cors({
+  origin: 'http://localhost:3000'
+}));
 
 //http://localhost:3001/persons
 app.get('/persons', async (req, res) => {
