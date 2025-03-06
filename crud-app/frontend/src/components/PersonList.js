@@ -5,7 +5,7 @@ const PersonList = () => {
   const [persons, setPersons] = useState([]);
 
   useEffect(() => {
-    axios.get('/persons').then((response) => {
+    axios.get('http://localhost:3001/persons').then((response) => {
 
         for (let i = 0; i < response.data.length; i++) {
             console.log(response.data.rows[i]);

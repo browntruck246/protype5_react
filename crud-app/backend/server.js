@@ -6,6 +6,7 @@ const { getAllPersons, createPerson } = require('./db/queries');
 const app = express();
 app.use(bodyParser.json());
 
+//http://localhost:3001/persons
 app.get('/persons', async (req, res) => {
   const persons = await getAllPersons();
   res.json(persons);
